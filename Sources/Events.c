@@ -37,7 +37,7 @@
 */
 
 extern int tcount;
-void Timer_OnInterrupt(void)
+void Timer_OnInterrupt(void) //Increases shared timer
 {
   /* Write your code here ... */
 	tcount++;
@@ -57,7 +57,7 @@ void Timer_OnInterrupt(void)
 ** ===================================================================
 */
 extern bool useSquare;
-void WaveSwitcher_OnInterrupt(void)
+void WaveSwitcher_OnInterrupt(void) //toggles waveform.
 {
   /* Write your code here ... */
 	if(useSquare){

@@ -33,11 +33,10 @@
 /* User includes (#include below this line is not maintained by Processor Expert) */
 
 bool useSquare = TRUE;
-int tcount = 0; //In case we need to poll something
+int tcount = 0; 		//For the shared timer
 int finger_val = 0;		//To store the value we get from finger input. hehe 
-int sound_val = 0;		//The value of the sound we are outputing
-int wave_pointer = 0;
-int sine_array[8] = {
+int wave_pointer = 0;	//The position in the sine_array
+int sine_array[8] = {	//The array of values that form a sine wave.
 		32768	,
 		55938	,
 		65536	,
@@ -58,67 +57,66 @@ PE_low_level_init();
 
 /* Write your code here */
 for (;;){
-	if(useSquare){
-		finger_val = Fingers_GetVal(); // each cycle, find out which fingers are grounded
-		switch(finger_val){ // and do...
-			case 0: // Frequency is 4000
-				if (tcount > 0){
+	finger_val = Fingers_GetVal();			// each cycle, find out which fingers are grounded
+	if(useSquare){ 							// Select which waveform to use, True uses Square
+		switch(finger_val){ 				
+			case 0: 						// Frequency is 8000Hz
+				if (tcount > 0){			// At 1 timer interrupt
+					SquareWave_NegVal();	// Negate the Speaker pin.
+					tcount = 0;				// And reset timer.
+					}
+				break;
+			case 1: 						// Frequency is 4000Hz
+				if (tcount > 1){			//Same as 0, except it waits for 2 interrupts
 					SquareWave_NegVal();
 					tcount = 0;
 					}
 				break;
-			case 1: 
-				if (tcount > 1){
+			case 2:							// Frequency is 1333Hz
+				if (tcount > 2){			//Same as 0, except it waits for 3 interrupts
 					SquareWave_NegVal();
 					tcount = 0;
 					}
 				break;
-			case 2:
-				if (tcount > 2){
+			case 3:							// Frequency is 1000Hz
+				if (tcount > 3){			//Same as 0, except it waits for 4 interrupts
 					SquareWave_NegVal();
 					tcount = 0;
 					}
 				break;
-			case 3:
-				if (tcount > 3){
+			case 4: 						// Frequency is 800Hz
+				if (tcount > 4){			//Same as 0, except it waits for 5 interrupts
 					SquareWave_NegVal();
 					tcount = 0;
 					}
 				break;
-			case 4: 
-				if (tcount > 4){
-					SquareWave_NegVal();
-					tcount = 0;
-					}
-				break;
-			case 5: 
-				if (tcount > 5){
+			case 5: 						// Frequency is 666Hz
+				if (tcount > 5){			//Same as 0, except it waits for 6 interrupts
 					SquareWave_NegVal();
 					tcount = 0;
 					}
 				break; 
-			case 6: 
-				if (tcount > 6){
+			case 6:  						// Frequency is 871Hz
+				if (tcount > 6){			//Same as 0, except it waits for 7 interrupts
 					SquareWave_NegVal();
 					tcount = 0;
 					}
 				break;
 			case 7: 
-				SquareWave_ClrVal();
+				SquareWave_ClrVal();		//It just always clears the pin value
 				break;
 			}
 		}
-	else {
-		finger_val = Fingers_GetVal(); // each cycle, find out which fingers are grounded
-		switch(finger_val){ // and do...
-			case 0: // Frequency is 4000
-				if (tcount > 0){
-					wave_pointer++;
-					tcount = 0;
+	else {									//useSquare is False, therefore use SineWave
+		switch(finger_val){
+			case 0: 						//Frequency is 4000
+				if (tcount > 0){			//Waits for 1 Interrupt
+					wave_pointer++;			//Increments the wave pointer
+					tcount = 0;				//Resets timer
 					}
 				break;
 			case 1: 
-				if (tcount > 1){
+				if (tcount > 1){			//The following cases just wait for one more interrupt each.
 					wave_pointer++;
 					tcount = 0;
 					}
@@ -154,11 +152,11 @@ for (;;){
 					}
 				break;
 			case 7: 
-				wave_pointer = 6;
+				wave_pointer = 6;				//Sets the pointer to the value in the array that is 0.
 				break;
 			}
-		if (wave_pointer>7) wave_pointer = 0;
-		Buzzer_SetRatio16(sine_array[wave_pointer]);
+		if (wave_pointer>7) wave_pointer = 0;	//If the pointer is greater than 7, it resets to the first value
+		Buzzer_SetRatio16(sine_array[wave_pointer]);	//And outputs the value to the PWM.
 		}
 	}
 
