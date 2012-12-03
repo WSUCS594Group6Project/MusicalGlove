@@ -1,0 +1,35 @@
+<CodeGenerationInfo>
+  <ToolchainSettings />
+  <GeneratedFilesList>
+    <GeneratedByPE>
+      <File Name="Generated_Code\SquareWave.h" FileDate="2012-11-27, 16:45:49" FileAge="1354056349899" FileType="4411" CompNumb="12" />
+      <File Name="Generated_Code\PE_Timer.c" FileDate="2012-11-27, 16:33:41" FileAge="1354055621584" FileType="4411" />
+      <File Name="Generated_Code\PE_Const.h" FileDate="2012-11-20, 15:47:57" FileAge="1353448077000" FileType="4411" />
+      <File Name="Generated_Code\SquareWave.c" FileDate="2012-11-27, 16:45:49" FileAge="1354056349895" FileType="4411" CompNumb="12" />
+      <File Name="Generated_Code\IO_Map.h" FileDate="2012-11-20, 15:47:57" FileAge="1353448077000" FileType="4411" />
+      <File Name="Sources\Events.h" FileDate="2012-11-27, 17:11:54" FileAge="1354057914944" FileType="16896" />
+      <File Name="Generated_Code\IO_Map.c" FileDate="2012-11-20, 15:47:57" FileAge="1353448077000" FileType="4411" />
+      <File Name="Generated_Code\Vectors.c" FileDate="2012-11-27, 17:11:54" FileAge="1354057914940" FileType="4411" CompNumb="2" />
+      <File Name="Sources\Events.c" FileDate="2012-11-27, 17:28:27" FileAge="1354058907839" FileType="16896" />
+      <File Name="Sources\ProcessorExpert.c" FileDate="2012-11-27, 17:31:01" FileAge="1354059061373" FileType="128" />
+      <File Name="Generated_Code\PE_Types.h" FileDate="2012-11-20, 15:47:57" FileAge="1353448077000" FileType="4411" />
+      <File Name="Generated_Code\Fingers.h" FileDate="2012-11-20, 16:13:27" FileAge="1353449607000" FileType="4411" CompNumb="8" />
+      <File Name="Generated_Code\Buzzer.h" FileDate="2012-11-27, 16:33:41" FileAge="1354055621572" FileType="4411" CompNumb="7" />
+      <File Name="Generated_Code\Buzzer.c" FileDate="2012-11-27, 16:33:41" FileAge="1354055621577" FileType="4411" CompNumb="7" />
+      <File Name="Generated_Code\Fingers.c" FileDate="2012-11-20, 16:13:27" FileAge="1353449607000" FileType="4411" CompNumb="8" />
+      <File Name="Generated_Code\WaveSwitcher.h" FileDate="2012-11-27, 17:11:54" FileAge="1354057914916" FileType="4411" CompNumb="13" />
+      <File Name="Generated_Code\PE_Error.h" FileDate="2012-11-20, 15:47:57" FileAge="1353448077000" FileType="4411" />
+      <File Name="Documentation\ProcessorExpert.txt" FileDate="2012-11-27, 17:11:55" FileAge="1354057915005" FileType="3072" />
+      <File Name="Generated_Code\WaveSwitcher.c" FileDate="2012-11-27, 17:11:54" FileAge="1354057914912" FileType="4411" CompNumb="13" />
+      <File Name="Generated_Code\Timer.h" FileDate="2012-11-27, 17:07:28" FileAge="1354057648606" FileType="4411" CompNumb="6" />
+      <File Name="Generated_Code\Timer.c" FileDate="2012-11-27, 17:07:28" FileAge="1354057648610" FileType="4411" CompNumb="6" />
+      <File Name="Generated_Code\Cpu.h" FileDate="2012-11-20, 15:47:57" FileAge="1353448077000" FileType="4411" CompNumb="2" />
+      <File Name="Documentation\ProcessorExpert_Settings.xml" FileDate="2012-11-27, 17:11:54" FileAge="1354057914994" FileType="3072" />
+      <File Name="Project_Settings\Linker_Files\ProcessorExpert.lcf" FileDate="2012-11-20, 15:47:57" FileAge="1353448077000" FileType="4" CompNumb="2" />
+      <File Name="Generated_Code\Cpu.c" FileDate="2012-11-27, 17:11:54" FileAge="1354057914935" FileType="4411" CompNumb="2" />
+      <File Name="Documentation\ProcessorExpert_SIGNALS.txt" FileDate="2012-11-27, 17:32:01" FileAge="1354059121449" FileType="3072" />
+      <File Name="Generated_Code\PE_Timer.h" FileDate="2012-11-27, 16:33:41" FileAge="1354055621580" FileType="4411" />
+    </GeneratedByPE>
+  </GeneratedFilesList>
+  <CodeGenReference>17</CodeGenReference>
+</CodeGenerationInfo>
